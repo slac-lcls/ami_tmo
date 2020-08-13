@@ -1,0 +1,269 @@
+{
+  "connects": [
+    [
+      "PeakFinderV4R3.0",
+      "row_cgrav",
+      "WaveformViewer.0",
+      "In"
+    ],
+    [
+      "PeakFinderV4R3.0",
+      "col_cgrav",
+      "WaveformViewer.0",
+      "In.1"
+    ],
+    [
+      "PeakFinderV4R3.0",
+      "row_cgrav",
+      "Binning2D.0",
+      "Y"
+    ],
+    [
+      "PeakFinderV4R3.0",
+      "col_cgrav",
+      "Binning2D.0",
+      "X"
+    ],
+    [
+      "Binning2D.0",
+      "XBins",
+      "Histogram2D.0",
+      "XBins"
+    ],
+    [
+      "Binning2D.0",
+      "YBins",
+      "Histogram2D.0",
+      "YBins"
+    ],
+    [
+      "Binning2D.0",
+      "Counts",
+      "Histogram2D.0",
+      "Counts"
+    ],
+    [
+      "img",
+      "Out",
+      "PeakFinderV4R3.0",
+      "Image"
+    ]
+  ],
+  "nodes": [
+    {
+      "class": "PeakFinderV4R3",
+      "name": "PeakFinderV4R3.0",
+      "state": {
+        "ctrl": {
+          "amax thr": 0.0,
+          "atot thr": 0.0,
+          "dr": 0.05,
+          "npix max": 25.0,
+          "npix min": 20.0,
+          "r0": 4.0,
+          "rank": 2.0,
+          "son min": 0.0,
+          "thr high": 100.0,
+          "thr low": 35.0
+        },
+        "enabled": true,
+        "note": "",
+        "pos": [
+          400.0,
+          500.0
+        ],
+        "terminals": {
+          "Image": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array2d"
+          },
+          "amp_tot": {
+            "group": null,
+            "io": "out",
+            "removable": true,
+            "ttype": "amitypes.Array1d"
+          },
+          "col_cgrav": {
+            "group": null,
+            "io": "out",
+            "removable": true,
+            "ttype": "amitypes.Array1d"
+          },
+          "npix": {
+            "group": null,
+            "io": "out",
+            "removable": true,
+            "ttype": "amitypes.Array1d"
+          },
+          "row_cgrav": {
+            "group": null,
+            "io": "out",
+            "removable": true,
+            "ttype": "amitypes.Array1d"
+          },
+          "son": {
+            "group": null,
+            "io": "out",
+            "removable": true,
+            "ttype": "amitypes.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "WaveformViewer",
+      "name": "WaveformViewer.0",
+      "state": {
+        "enabled": true,
+        "note": "",
+        "pos": [
+          600.0,
+          300.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          },
+          "In.1": {
+            "group": null,
+            "io": "in",
+            "removable": true,
+            "ttype": "amitypes.Array1d"
+          }
+        },
+        "widget": {
+          "Auto Range": true,
+          "Show Grid": false,
+          "Title": "",
+          "X Axis Label": "",
+          "Y Axis Label": ""
+        }
+      }
+    },
+    {
+      "class": "Binning2D",
+      "name": "Binning2D.0",
+      "state": {
+        "ctrl": {
+          "density": false,
+          "range x max": 1200.0,
+          "range x min": 0.0,
+          "range y max": 1200.0,
+          "range y min": 0.0,
+          "x bins": 100,
+          "y bins": 100
+        },
+        "enabled": true,
+        "note": "",
+        "pos": [
+          600.0,
+          500.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array2d"
+          },
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.Array1d]"
+          },
+          "XBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.Array1d]"
+          },
+          "YBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "Histogram2D",
+      "name": "Histogram2D.0",
+      "state": {
+        "enabled": true,
+        "note": "",
+        "pos": [
+          800.0,
+          500.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array2d"
+          },
+          "XBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          },
+          "YBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          }
+        },
+        "widget": {
+          "Title": "",
+          "X Axis Label": "",
+          "Y Axis Label": ""
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "img",
+      "state": {
+        "enabled": true,
+        "note": "",
+        "pos": [
+          200.0,
+          500.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array2d"
+          }
+        }
+      }
+    }
+  ],
+  "source_configuration": {
+    "files": [
+      "/reg/g/psdm/tutorials/ami2/tmo/amox27716_run100.h5"
+    ],
+    "hb_period": 10,
+    "init_time": 0.5,
+    "interval": 0.01,
+    "repeat": true,
+    "type": "hdf5"
+  }
+}

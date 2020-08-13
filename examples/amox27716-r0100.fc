@@ -1,0 +1,2655 @@
+{
+  "connects": [
+    [
+      "tmo_quadanode:raw:times",
+      "Out",
+      "WFPeaks.0",
+      "Times"
+    ],
+    [
+      "tmo_quadanode:raw:waveforms",
+      "Out",
+      "WFPeaks.0",
+      "Waveform"
+    ],
+    [
+      "timestamp",
+      "Out",
+      "Hexanode.0",
+      "Event Number"
+    ],
+    [
+      "tmo_quadanode:calibconst",
+      "Out",
+      "Hexanode.0",
+      "Calib"
+    ],
+    [
+      "WFPeaks.0",
+      "Num of Hits",
+      "Hexanode.0",
+      "Num of Hits"
+    ],
+    [
+      "WFPeaks.0",
+      "Peak Times",
+      "Hexanode.0",
+      "Peak Times"
+    ],
+    [
+      "Hexanode.0",
+      "X",
+      "WaveformViewer.0",
+      "In"
+    ],
+    [
+      "Hexanode.0",
+      "X",
+      "Binning.0",
+      "In"
+    ],
+    [
+      "Hexanode.0",
+      "Y",
+      "WaveformViewer.1",
+      "In"
+    ],
+    [
+      "Hexanode.0",
+      "Y",
+      "Binning.1",
+      "In"
+    ],
+    [
+      "Hexanode.0",
+      "R",
+      "WaveformViewer.2",
+      "In"
+    ],
+    [
+      "Hexanode.0",
+      "R",
+      "Binning.2",
+      "In"
+    ],
+    [
+      "Hexanode.0",
+      "T",
+      "WaveformViewer.3",
+      "In"
+    ],
+    [
+      "Hexanode.0",
+      "T",
+      "Binning.3",
+      "In"
+    ],
+    [
+      "Hexanode.0",
+      "T",
+      "Combinations.0",
+      "In"
+    ],
+    [
+      "Hexanode.0",
+      "R",
+      "Binning2D.1",
+      "Y"
+    ],
+    [
+      "Hexanode.0",
+      "T",
+      "Binning2D.1",
+      "X"
+    ],
+    [
+      "Hexanode.0",
+      "T",
+      "Binning2D.2",
+      "X"
+    ],
+    [
+      "Hexanode.0",
+      "Y",
+      "Binning2D.2",
+      "Y"
+    ],
+    [
+      "Hexanode.0",
+      "T",
+      "Binning2D.3",
+      "X"
+    ],
+    [
+      "Hexanode.0",
+      "X",
+      "Binning2D.3",
+      "Y"
+    ],
+    [
+      "Hexanode.0",
+      "Y",
+      "Binning2D.4",
+      "X"
+    ],
+    [
+      "Hexanode.0",
+      "X",
+      "Binning2D.4",
+      "Y"
+    ],
+    [
+      "Binning.0",
+      "Bins",
+      "Histogram.0",
+      "Bins"
+    ],
+    [
+      "Binning.0",
+      "Counts",
+      "Histogram.0",
+      "Counts"
+    ],
+    [
+      "Binning.1",
+      "Bins",
+      "Histogram.1",
+      "Bins"
+    ],
+    [
+      "Binning.1",
+      "Counts",
+      "Histogram.1",
+      "Counts"
+    ],
+    [
+      "Binning.2",
+      "Bins",
+      "Histogram.2",
+      "Bins"
+    ],
+    [
+      "Binning.2",
+      "Counts",
+      "Histogram.2",
+      "Counts"
+    ],
+    [
+      "Binning.3",
+      "Bins",
+      "Histogram.3",
+      "Bins"
+    ],
+    [
+      "Binning.3",
+      "Counts",
+      "Histogram.3",
+      "Counts"
+    ],
+    [
+      "Combinations.0",
+      "Out",
+      "Binning2D.0",
+      "X"
+    ],
+    [
+      "Combinations.0",
+      "Out.1",
+      "Binning2D.0",
+      "Y"
+    ],
+    [
+      "Binning2D.4",
+      "XBins",
+      "Histogram2D.4",
+      "XBins"
+    ],
+    [
+      "Binning2D.4",
+      "YBins",
+      "Histogram2D.4",
+      "YBins"
+    ],
+    [
+      "Binning2D.4",
+      "Counts",
+      "Histogram2D.4",
+      "Counts"
+    ],
+    [
+      "Binning2D.0",
+      "XBins",
+      "Histogram2D.0",
+      "XBins"
+    ],
+    [
+      "Binning2D.0",
+      "YBins",
+      "Histogram2D.0",
+      "YBins"
+    ],
+    [
+      "Binning2D.0",
+      "Counts",
+      "Histogram2D.0",
+      "Counts"
+    ],
+    [
+      "Binning2D.1",
+      "XBins",
+      "Histogram2D.1",
+      "XBins"
+    ],
+    [
+      "Binning2D.1",
+      "YBins",
+      "Histogram2D.1",
+      "YBins"
+    ],
+    [
+      "Binning2D.1",
+      "Counts",
+      "Histogram2D.1",
+      "Counts"
+    ],
+    [
+      "Binning2D.2",
+      "XBins",
+      "Histogram2D.2",
+      "XBins"
+    ],
+    [
+      "Binning2D.2",
+      "YBins",
+      "Histogram2D.2",
+      "YBins"
+    ],
+    [
+      "Binning2D.2",
+      "Counts",
+      "Histogram2D.2",
+      "Counts"
+    ],
+    [
+      "Binning2D.3",
+      "XBins",
+      "Histogram2D.3",
+      "XBins"
+    ],
+    [
+      "Binning2D.3",
+      "YBins",
+      "Histogram2D.3",
+      "YBins"
+    ],
+    [
+      "Binning2D.3",
+      "Counts",
+      "Histogram2D.3",
+      "Counts"
+    ]
+  ],
+  "nodes": [
+    {
+      "class": "SourceNode",
+      "name": "tmo_quadanode:raw:times",
+      "state": {
+        "enabled": true,
+        "pos": [
+          0.0,
+          200.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any"
+          }
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "tmo_quadanode:raw:waveforms",
+      "state": {
+        "enabled": true,
+        "pos": [
+          0.0,
+          400.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any"
+          }
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "timestamp",
+      "state": {
+        "enabled": true,
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "int"
+          }
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "tmo_quadanode:calibconst",
+      "state": {
+        "enabled": true,
+        "pos": [
+          200.0,
+          500.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Dict"
+          }
+        }
+      }
+    },
+    {
+      "class": "WFPeaks",
+      "name": "WFPeaks.0",
+      "state": {
+        "enabled": true,
+        "pos": [
+          400.0,
+          300.0
+        ],
+        "terminals": {
+          "Index": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "Num of Hits": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Peak Times": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "Times": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "Values": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "Waveform": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          }
+        },
+        "widget": {
+          "Channel 0": {
+            "channel": "x1",
+            "delay": 3.997500000000001e-09,
+            "fraction": 0.35,
+            "offset": 0.032654320557811034,
+            "polarity": "Negative",
+            "sample_interval": 2.5e-10,
+            "threshold": 0.04843980037941781,
+            "timerange_high": 1e-05,
+            "timerange_low": 1e-06,
+            "walk": 0.0
+          },
+          "Channel 1": {
+            "channel": "x2",
+            "delay": 4.712500000000001e-09,
+            "fraction": 0.35,
+            "offset": 0.05829590969277516,
+            "polarity": "Negative",
+            "sample_interval": 2.5e-10,
+            "threshold": 0.062173077232695384,
+            "timerange_high": 1e-05,
+            "timerange_low": 1e-06,
+            "walk": 0.0
+          },
+          "Channel 2": {
+            "channel": "y1",
+            "delay": 4.5435e-09,
+            "fraction": 0.35,
+            "offset": 0.01740340726630819,
+            "polarity": "Negative",
+            "sample_interval": 2.5e-10,
+            "threshold": 0.03585075086037011,
+            "timerange_high": 1e-05,
+            "timerange_low": 1e-06,
+            "walk": 0.0
+          },
+          "Channel 3": {
+            "channel": "y2",
+            "delay": 4.140500000000001e-09,
+            "fraction": 0.35,
+            "offset": 0.008837929181129337,
+            "polarity": "Negative",
+            "sample_interval": 2.5e-10,
+            "threshold": 0.03525419820558033,
+            "timerange_high": 1e-05,
+            "timerange_low": 1e-06,
+            "walk": 0.0
+          },
+          "Channel 4": {
+            "channel": "mcp",
+            "delay": 3.068e-09,
+            "fraction": 0.35,
+            "offset": 0.054470544805354446,
+            "polarity": "Negative",
+            "sample_interval": 2.5e-10,
+            "threshold": 0.056374120466532174,
+            "timerange_high": 1e-05,
+            "timerange_low": 1e-06,
+            "walk": 0.0
+          },
+          "DLD": true,
+          "channels": 5,
+          "num hits": 16,
+          "uniform parameters": false
+        }
+      }
+    },
+    {
+      "class": "Hexanode",
+      "name": "Hexanode.0",
+      "state": {
+        "ctrl": {
+          "num chans": "5",
+          "num hits": 16,
+          "verbose": false
+        },
+        "enabled": true,
+        "pos": [
+          400.0,
+          300.0
+        ],
+        "terminals": {
+          "Calib": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Dict"
+          },
+          "Event Number": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "float"
+          },
+          "Num of Hits": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Peak Times": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "R": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "T": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "X": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "WaveformViewer",
+      "name": "WaveformViewer.0",
+      "state": {
+        "enabled": true,
+        "pos": [
+          600.0,
+          -600.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Auto Range": true,
+            "Show Grid": false,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "trace.0": "Hexanode.0.X"
+          },
+          "legend": {
+            "trace.0": [
+              "Hexanode.0.X",
+              "Hexanode.0.X",
+              {
+                "Line": {
+                  "color": [
+                    128,
+                    128,
+                    128,
+                    255
+                  ],
+                  "style": "Solid",
+                  "width": 1
+                },
+                "Point": {
+                  "Brush": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "Size": 14,
+                  "symbol": "o"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -3.214446753787172,
+                3.214446753787172
+              ],
+              [
+                -5.894694550359578,
+                12.894694550359578
+              ]
+            ],
+            "viewRange": [
+              [
+                -3.214446753787172,
+                3.214446753787172
+              ],
+              [
+                -5.894694550359578,
+                12.894694550359578
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Binning",
+      "name": "Binning.0",
+      "state": {
+        "ctrl": {
+          "auto range": false,
+          "bins": 160,
+          "density": false,
+          "range max": 40.0,
+          "range min": -40.0,
+          "weighted": false
+        },
+        "enabled": true,
+        "pos": [
+          600.0,
+          -400.0
+        ],
+        "terminals": {
+          "Bins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          }
+        }
+      }
+    },
+    {
+      "class": "WaveformViewer",
+      "name": "WaveformViewer.1",
+      "state": {
+        "enabled": true,
+        "pos": [
+          600.0,
+          -200.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Auto Range": true,
+            "Show Grid": false,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "viewRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Binning",
+      "name": "Binning.1",
+      "state": {
+        "ctrl": {
+          "auto range": false,
+          "bins": 160,
+          "density": false,
+          "range max": 40.0,
+          "range min": -40.0,
+          "weighted": false
+        },
+        "enabled": true,
+        "pos": [
+          600.0,
+          0.0
+        ],
+        "terminals": {
+          "Bins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          }
+        }
+      }
+    },
+    {
+      "class": "WaveformViewer",
+      "name": "WaveformViewer.2",
+      "state": {
+        "enabled": true,
+        "pos": [
+          600.0,
+          200.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Auto Range": true,
+            "Show Grid": false,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -0.0473839794920356,
+                1.0473839794920357
+              ],
+              [
+                0.024226780176785798,
+                1.7824762257071238
+              ]
+            ],
+            "viewRange": [
+              [
+                -0.0473839794920356,
+                1.0473839794920357
+              ],
+              [
+                0.024226780176785798,
+                1.7824762257071238
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Binning",
+      "name": "Binning.2",
+      "state": {
+        "ctrl": {
+          "auto range": false,
+          "bins": 80,
+          "density": false,
+          "range max": 40.0,
+          "range min": 0.0,
+          "weighted": false
+        },
+        "enabled": true,
+        "pos": [
+          600.0,
+          400.0
+        ],
+        "terminals": {
+          "Bins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          }
+        }
+      }
+    },
+    {
+      "class": "WaveformViewer",
+      "name": "WaveformViewer.3",
+      "state": {
+        "enabled": true,
+        "pos": [
+          600.0,
+          600.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Auto Range": true,
+            "Show Grid": false,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "viewRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Binning",
+      "name": "Binning.3",
+      "state": {
+        "ctrl": {
+          "auto range": false,
+          "bins": 60,
+          "density": false,
+          "range max": 6e-06,
+          "range min": 1e-06,
+          "weighted": false
+        },
+        "enabled": true,
+        "pos": [
+          600.0,
+          800.0
+        ],
+        "terminals": {
+          "Bins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          }
+        }
+      }
+    },
+    {
+      "class": "Combinations",
+      "name": "Combinations.0",
+      "state": {
+        "ctrl": {
+          "length": 2
+        },
+        "enabled": true,
+        "pos": [
+          600.0,
+          900.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Out.1": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "Binning2D",
+      "name": "Binning2D.4",
+      "state": {
+        "ctrl": {
+          "density": false,
+          "range x max": 40.0,
+          "range x min": -40.0,
+          "range y max": 40.0,
+          "range y min": -40.0,
+          "x bins": 160,
+          "y bins": 160
+        },
+        "enabled": true,
+        "pos": [
+          600.0,
+          1100.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "XBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "YBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "Histogram",
+      "name": "Histogram.0",
+      "state": {
+        "enabled": true,
+        "pos": [
+          800.0,
+          -400.0
+        ],
+        "terminals": {
+          "Bins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Counts": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Auto Range": true,
+            "Show Grid": false,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "viewRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Histogram",
+      "name": "Histogram.1",
+      "state": {
+        "enabled": true,
+        "pos": [
+          800.0,
+          0.0
+        ],
+        "terminals": {
+          "Bins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Counts": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Auto Range": true,
+            "Show Grid": false,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "viewRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Histogram",
+      "name": "Histogram.2",
+      "state": {
+        "enabled": true,
+        "pos": [
+          800.0,
+          400.0
+        ],
+        "terminals": {
+          "Bins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Counts": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Auto Range": true,
+            "Show Grid": false,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "viewRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Histogram",
+      "name": "Histogram.3",
+      "state": {
+        "enabled": true,
+        "pos": [
+          800.0,
+          800.0
+        ],
+        "terminals": {
+          "Bins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Counts": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Auto Range": true,
+            "Show Grid": false,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "viewRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Binning2D",
+      "name": "Binning2D.0",
+      "state": {
+        "ctrl": {
+          "density": false,
+          "range x max": 6e-06,
+          "range x min": 1e-06,
+          "range y max": 6e-06,
+          "range y min": 1e-06,
+          "x bins": 60,
+          "y bins": 60
+        },
+        "enabled": true,
+        "pos": [
+          800.0,
+          900.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "XBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "YBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "Binning2D",
+      "name": "Binning2D.1",
+      "state": {
+        "ctrl": {
+          "density": false,
+          "range x max": 6e-06,
+          "range x min": 1e-06,
+          "range y max": 40.0,
+          "range y min": 0.0,
+          "x bins": 100,
+          "y bins": 80
+        },
+        "enabled": true,
+        "pos": [
+          800.0,
+          500.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "XBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "YBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "Binning2D",
+      "name": "Binning2D.2",
+      "state": {
+        "ctrl": {
+          "density": false,
+          "range x max": 6e-06,
+          "range x min": 1e-06,
+          "range y max": 40.0,
+          "range y min": -40.0,
+          "x bins": 100,
+          "y bins": 160
+        },
+        "enabled": true,
+        "pos": [
+          800.0,
+          100.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "XBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "YBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "Binning2D",
+      "name": "Binning2D.3",
+      "state": {
+        "ctrl": {
+          "density": false,
+          "range x max": 6e-06,
+          "range x min": 1e-06,
+          "range y max": 40.0,
+          "range y min": -40.0,
+          "x bins": 100,
+          "y bins": 160
+        },
+        "enabled": true,
+        "pos": [
+          800.0,
+          -300.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "XBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "YBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "Histogram2D",
+      "name": "Histogram2D.4",
+      "state": {
+        "enabled": true,
+        "pos": [
+          800.0,
+          1100.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "XBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "YBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Histogram": {
+              "Auto Levels": true,
+              "Auto Range": true,
+              "Log Scale": false
+            },
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.0,
+                  [
+                    0,
+                    0,
+                    3,
+                    255
+                  ]
+                ],
+                [
+                  0.25,
+                  [
+                    87,
+                    15,
+                    109,
+                    255
+                  ]
+                ],
+                [
+                  0.5,
+                  [
+                    187,
+                    55,
+                    84,
+                    255
+                  ]
+                ],
+                [
+                  0.75,
+                  [
+                    249,
+                    142,
+                    8,
+                    255
+                  ]
+                ],
+                [
+                  1.0,
+                  [
+                    252,
+                    254,
+                    164,
+                    255
+                  ]
+                ]
+              ]
+            },
+            "levels": [
+              -4779.184110177448,
+              70886.98622782645
+            ],
+            "mode": "mono"
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              1.0
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -42.67243720891368,
+                42.67243720891368
+              ],
+              [
+                -43.54775887097775,
+                43.54775887097775
+              ]
+            ],
+            "viewRange": [
+              [
+                -42.67243720891368,
+                42.67243720891368
+              ],
+              [
+                -43.54775887097775,
+                43.54775887097775
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Histogram2D",
+      "name": "Histogram2D.0",
+      "state": {
+        "enabled": true,
+        "pos": [
+          1000.0,
+          900.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "XBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "YBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Histogram": {
+              "Auto Levels": true,
+              "Auto Range": true,
+              "Log Scale": false
+            },
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.0,
+                  [
+                    0,
+                    0,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  1.0,
+                  [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                ]
+              ]
+            },
+            "levels": [
+              0,
+              22245877.0
+            ],
+            "mode": "mono"
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -2.640797160170601e-06,
+                2.640797160170601e-06
+              ],
+              [
+                -2.762506165067429e-06,
+                2.762506165067429e-06
+              ]
+            ],
+            "viewRange": [
+              [
+                -2.640797160170601e-06,
+                2.640797160170601e-06
+              ],
+              [
+                -2.762506165067429e-06,
+                2.762506165067429e-06
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Histogram2D",
+      "name": "Histogram2D.1",
+      "state": {
+        "enabled": true,
+        "pos": [
+          1000.0,
+          500.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "XBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "YBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Histogram": {
+              "Auto Levels": true,
+              "Auto Range": true,
+              "Log Scale": false
+            },
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.0,
+                  [
+                    0,
+                    0,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  1.0,
+                  [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                ]
+              ]
+            },
+            "levels": [
+              0,
+              981006.0
+            ],
+            "mode": "mono"
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -2.657124996378056e-06,
+                2.657124996378056e-06
+              ],
+              [
+                -22.190996025562225,
+                22.190996025562225
+              ]
+            ],
+            "viewRange": [
+              [
+                -2.657124996378056e-06,
+                2.657124996378056e-06
+              ],
+              [
+                -22.190996025562225,
+                22.190996025562225
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Histogram2D",
+      "name": "Histogram2D.2",
+      "state": {
+        "enabled": true,
+        "pos": [
+          1000.0,
+          100.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "XBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "YBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Histogram": {
+              "Auto Levels": true,
+              "Auto Range": true,
+              "Log Scale": false
+            },
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.0,
+                  [
+                    0,
+                    0,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  1.0,
+                  [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                ]
+              ]
+            },
+            "levels": [
+              0,
+              1429109.0
+            ],
+            "mode": "mono"
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -2.657124996378056e-06,
+                2.657124996378056e-06
+              ],
+              [
+                -44.657656598025845,
+                44.657656598025845
+              ]
+            ],
+            "viewRange": [
+              [
+                -2.657124996378056e-06,
+                2.657124996378056e-06
+              ],
+              [
+                -44.657656598025845,
+                44.657656598025845
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Histogram2D",
+      "name": "Histogram2D.3",
+      "state": {
+        "enabled": true,
+        "pos": [
+          1000.0,
+          -300.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "XBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "YBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Histogram": {
+              "Auto Levels": true,
+              "Auto Range": true,
+              "Log Scale": false
+            },
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.3333,
+                  [
+                    185,
+                    0,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  0.6666,
+                  [
+                    255,
+                    220,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  1,
+                  [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                ],
+                [
+                  0,
+                  [
+                    0,
+                    0,
+                    0,
+                    255
+                  ]
+                ]
+              ]
+            },
+            "levels": [
+              1525.2776962884818,
+              38902.51100107067
+            ],
+            "mode": "mono"
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -2.6569220375551354e-06,
+                2.6569220375551354e-06
+              ],
+              [
+                -43.54775887097775,
+                43.54775887097775
+              ]
+            ],
+            "viewRange": [
+              [
+                -2.6569220375551354e-06,
+                2.6569220375551354e-06
+              ],
+              [
+                -43.54775887097775,
+                43.54775887097775
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    }
+  ],
+  "source_configuration": {
+    "files": [
+      "/reg/g/psdm/tutorials/ami2/tmo/data-amox27716-r0100-acqiris-e001000.xtc2"
+    ],
+    "hb_period": 10,
+    "init_time": 0.5,
+    "interval": 0.01,
+    "repeat": true,
+    "type": "psana"
+  },
+  "viewbox": {
+    "comments": []
+  }
+}

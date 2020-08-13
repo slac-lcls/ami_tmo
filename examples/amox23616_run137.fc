@@ -1,0 +1,360 @@
+{
+  "connects": [
+    [
+      "xtcav",
+      "Out",
+      "XTCAVLasingOn.0",
+      "cam"
+    ],
+    [
+      "source",
+      "Out",
+      "XTCAVLasingOn.0",
+      "src"
+    ],
+    [
+      "xtcavpars",
+      "Out",
+      "XTCAVLasingOn.0",
+      "pars"
+    ],
+    [
+      "XTCAVLasingOn.0",
+      "time",
+      "Take.0",
+      "In"
+    ],
+    [
+      "XTCAVLasingOn.0",
+      "power",
+      "Take.0",
+      "In.1"
+    ],
+    [
+      "Take.0",
+      "Out",
+      "LinePlot.0",
+      "X"
+    ],
+    [
+      "Take.0",
+      "Out.1",
+      "LinePlot.0",
+      "Y"
+    ]
+  ],
+  "nodes": [
+    {
+      "class": "SourceNode",
+      "name": "xtcav",
+      "state": {
+        "enabled": true,
+        "pos": [
+          100.0,
+          300.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.source.Detector"
+          }
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "source",
+      "state": {
+        "enabled": true,
+        "pos": [
+          100.0,
+          100.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.source.DataSource"
+          }
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "xtcavpars",
+      "state": {
+        "enabled": true,
+        "pos": [
+          100.0,
+          500.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.source.Detector"
+          }
+        }
+      }
+    },
+    {
+      "class": "XTCAVLasingOn",
+      "name": "XTCAVLasingOn.0",
+      "state": {
+        "ctrl": {
+          "island split method": "scipyLabel",
+          "island split par1": 3.0,
+          "island split par2": 5.0,
+          "num bunches": 1,
+          "roi expand": 1.0,
+          "roi fraction": 0.001,
+          "snr filter": 10.0
+        },
+        "enabled": true,
+        "pos": [
+          300.0,
+          300.0
+        ],
+        "terminals": {
+          "agreement": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "float"
+          },
+          "cam": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.source.Detector"
+          },
+          "pars": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.source.Detector"
+          },
+          "power": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "pulse": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "src": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.source.DataSource"
+          },
+          "time": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          }
+        }
+      }
+    },
+    {
+      "class": "Take",
+      "name": "Take.0",
+      "state": {
+        "ctrl": {
+          "axis": 0,
+          "index": 0,
+          "mode": "raise"
+        },
+        "enabled": true,
+        "pos": [
+          500.0,
+          300.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[amitypes.array.Array3d, amitypes.array.Array2d, amitypes.array.Array1d, typing.List[float]]"
+          },
+          "In.1": {
+            "group": "group.1",
+            "io": "in",
+            "removable": true,
+            "ttype": "typing.Union[amitypes.array.Array3d, amitypes.array.Array2d, amitypes.array.Array1d, typing.List[float]]"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Out.1": {
+            "group": "group.1",
+            "io": "out",
+            "removable": true,
+            "ttype": "amitypes.array.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "LinePlot",
+      "name": "LinePlot.0",
+      "state": {
+        "enabled": true,
+        "pos": [
+          700.0,
+          300.0
+        ],
+        "terminals": {
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Auto Range": true,
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "time",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "power",
+              "Log Scale": false
+            },
+            "trace.0": "Take.0.Out.1 vs Take.0.Out"
+          },
+          "legend": {
+            "trace.0": [
+              "Take.0.Out.1 vs Take.0.Out",
+              "Take.0.Out.1 vs Take.0.Out",
+              {
+                "Line": {
+                  "color": [
+                    128,
+                    128,
+                    128,
+                    255
+                  ],
+                  "style": "Solid",
+                  "width": 1
+                },
+                "Point": {
+                  "Brush": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "Size": 14,
+                  "symbol": "o"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -63.48630837809219,
+                54.14172726800766
+              ],
+              [
+                -0.23475169067521137,
+                4.184334746908745
+              ]
+            ],
+            "viewRange": [
+              [
+                -63.48630837809219,
+                54.14172726800766
+              ],
+              [
+                -0.23475169067521137,
+                4.184334746908745
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    }
+  ],
+  "source_configuration": {
+    "files": [
+      "/reg/g/psdm/tutorials/ami2/tmo/data-amox23616-r0137-e000100-xtcav-v2.xtc2"
+    ],
+    "hb_period": 4,
+    "init_time": 0.5,
+    "interval": 0.01,
+    "repeat": true,
+    "type": "psana"
+  },
+  "viewbox": {
+    "comments": []
+  }
+}

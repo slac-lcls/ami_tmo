@@ -1,0 +1,686 @@
+{
+  "connects": [
+    [
+      "opal:raw:image",
+      "Out",
+      "POP.0",
+      "Image"
+    ],
+    [
+      "opal:calibconst",
+      "Out",
+      "POP.0",
+      "Calib"
+    ],
+    [
+      "POP.0",
+      "sliceImg",
+      "ImageViewer.0",
+      "In"
+    ],
+    [
+      "POP.0",
+      "Rbins",
+      "LinePlot.0",
+      "X"
+    ],
+    [
+      "POP.0",
+      "DistR",
+      "LinePlot.0",
+      "Y"
+    ],
+    [
+      "POP.0",
+      "Ebins",
+      "LinePlot.1",
+      "X"
+    ],
+    [
+      "POP.0",
+      "DistE",
+      "LinePlot.1",
+      "Y"
+    ]
+  ],
+  "library": {
+    "paths": [
+      "/reg/g/psdm/tutorials/ami2/tmo/TMO.py"
+    ]
+  },
+  "nodes": [
+    {
+      "class": "SourceNode",
+      "name": "opal:raw:image",
+      "state": {
+        "enabled": true,
+        "pos": [
+          0.0,
+          300.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Auto Levels_Histogram": true,
+            "Auto Range_Histogram": true,
+            "Flip_Display": false,
+            "Label_X_Axis": "X (pixel)",
+            "Label_Y_Axis": "Y (pixel)",
+            "Log Scale_Histogram": false,
+            "Log Scale_X_Axis": false,
+            "Log Scale_Y_Axis": false,
+            "Rotate Counter Clockwise_Display": "0",
+            "Show Grid": true,
+            "Title": "Raw VMI Image"
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.0,
+                  [
+                    68,
+                    1,
+                    84,
+                    255
+                  ]
+                ],
+                [
+                  0.25,
+                  [
+                    58,
+                    82,
+                    139,
+                    255
+                  ]
+                ],
+                [
+                  0.5,
+                  [
+                    32,
+                    144,
+                    140,
+                    255
+                  ]
+                ],
+                [
+                  0.75,
+                  [
+                    94,
+                    201,
+                    97,
+                    255
+                  ]
+                ],
+                [
+                  1.0,
+                  [
+                    253,
+                    231,
+                    36,
+                    255
+                  ]
+                ]
+              ]
+            },
+            "levels": [
+              8.953022775833253e-05,
+              928.5402584654692
+            ],
+            "mode": "mono"
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -39.968299443308894,
+                1063.968299443309
+              ],
+              [
+                -86.11429528771384,
+                1110.114295287714
+              ]
+            ],
+            "viewRange": [
+              [
+                -39.968299443308894,
+                1063.968299443309
+              ],
+              [
+                -86.11429528771384,
+                1110.114295287714
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "opal:calibconst",
+      "state": {
+        "enabled": true,
+        "pos": [
+          0.0,
+          500.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Dict"
+          }
+        }
+      }
+    },
+    {
+      "class": "POP",
+      "name": "POP.0",
+      "state": {
+        "ctrl": {
+          "Rmax": 512,
+          "X0": 512,
+          "Y0": 512,
+          "accum_num": 30,
+          "edge_w": 10,
+          "lmax": 4,
+          "normalizeDist": true,
+          "reg": 0.0
+        },
+        "enabled": true,
+        "pos": [
+          200.0,
+          400.0
+        ],
+        "terminals": {
+          "Calib": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Dict"
+          },
+          "DistE": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "DistR": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Ebins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Image": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "Rbins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "sliceImg": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          }
+        }
+      }
+    },
+    {
+      "class": "ImageViewer",
+      "name": "ImageViewer.0",
+      "state": {
+        "enabled": true,
+        "pos": [
+          400.0,
+          200.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Auto Levels_Histogram": true,
+            "Auto Range_Histogram": true,
+            "Flip_Display": false,
+            "Label_X_Axis": "Y (pixel)",
+            "Label_Y_Axis": "X (pixel)",
+            "Log Scale_Histogram": false,
+            "Log Scale_X_Axis": false,
+            "Log Scale_Y_Axis": false,
+            "Rotate Counter Clockwise_Display": "0",
+            "Show Grid": true,
+            "Title": "3D Slice"
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.0,
+                  [
+                    68,
+                    1,
+                    84,
+                    255
+                  ]
+                ],
+                [
+                  0.25,
+                  [
+                    58,
+                    82,
+                    139,
+                    255
+                  ]
+                ],
+                [
+                  0.5,
+                  [
+                    32,
+                    144,
+                    140,
+                    255
+                  ]
+                ],
+                [
+                  0.75,
+                  [
+                    94,
+                    201,
+                    97,
+                    255
+                  ]
+                ],
+                [
+                  1.0,
+                  [
+                    253,
+                    231,
+                    36,
+                    255
+                  ]
+                ]
+              ]
+            },
+            "levels": [
+              0,
+              0.9841527440743091
+            ],
+            "mode": "mono"
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -39.968299443308894,
+                1063.968299443309
+              ],
+              [
+                -86.11429528771384,
+                1110.114295287714
+              ]
+            ],
+            "viewRange": [
+              [
+                -39.968299443308894,
+                1063.968299443309
+              ],
+              [
+                -86.11429528771384,
+                1110.114295287714
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "LinePlot",
+      "name": "LinePlot.0",
+      "state": {
+        "enabled": true,
+        "pos": [
+          400.0,
+          400.0
+        ],
+        "terminals": {
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Auto Range": true,
+            "Label_X_Axis": "Radius",
+            "Label_Y_Axis": "Yield",
+            "Log Scale_X_Axis": false,
+            "Log Scale_Y_Axis": false,
+            "Show Grid": true,
+            "Title": "Radial Distribution",
+            "trace.0": "POP.0.DistR vs POP.0.Rbins"
+          },
+          "legend": {
+            "trace.0": [
+              "POP.0.DistR vs POP.0.Rbins",
+              "POP.0.DistR vs POP.0.Rbins"
+            ]
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -16.606743114468074,
+                529.606743114468
+              ],
+              [
+                -0.06473503259280615,
+                1.0647350325928062
+              ]
+            ],
+            "viewRange": [
+              [
+                -16.606743114468074,
+                529.606743114468
+              ],
+              [
+                -0.06473503259280615,
+                1.0647350325928062
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "LinePlot",
+      "name": "LinePlot.1",
+      "state": {
+        "enabled": true,
+        "pos": [
+          400.0,
+          600.0
+        ],
+        "terminals": {
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Auto Range": true,
+            "Label_X_Axis": "Energy",
+            "Label_Y_Axis": "Yield",
+            "Log Scale_X_Axis": false,
+            "Log Scale_Y_Axis": false,
+            "Show Grid": true,
+            "Title": "Energy Distribution",
+            "trace.0": "POP.0.DistE vs POP.0.Ebins"
+          },
+          "legend": {
+            "trace.0": [
+              "POP.0.DistE vs POP.0.Ebins",
+              "POP.0.DistE vs POP.0.Ebins"
+            ]
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -4.1382504848286645,
+                109.81866460247572
+              ],
+              [
+                -0.06473503259280615,
+                1.0647350325928062
+              ]
+            ],
+            "viewRange": [
+              [
+                -4.1382504848286645,
+                109.81866460247572
+              ],
+              [
+                -0.06473503259280615,
+                1.0647350325928062
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    }
+  ],
+  "source_configuration": {
+    "files": [
+      "/reg/g/psdm/tutorials/ami2/tmo/pop_raw_imgs.xtc2"
+    ],
+    "hb_period": 10,
+    "init_time": 0.5,
+    "interval": 0.01,
+    "repeat": true,
+    "type": "psana"
+  },
+  "viewbox": {
+    "comments": []
+  }
+}

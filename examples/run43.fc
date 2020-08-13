@@ -1,0 +1,719 @@
+{
+  "connects": [
+    [
+      "times",
+      "Out",
+      "Take.0",
+      "In"
+    ],
+    [
+      "times",
+      "Out",
+      "WFPeaks.0",
+      "Times"
+    ],
+    [
+      "waveforms",
+      "Out",
+      "Take.0",
+      "In.1"
+    ],
+    [
+      "waveforms",
+      "Out",
+      "WFPeaks.0",
+      "Waveform"
+    ],
+    [
+      "Take.0",
+      "Out",
+      "LinePlot.0",
+      "X"
+    ],
+    [
+      "Take.0",
+      "Out.1",
+      "LinePlot.0",
+      "Y"
+    ],
+    [
+      "Take.0",
+      "Out.1",
+      "WaveformViewer.0",
+      "In"
+    ],
+    [
+      "Take.0",
+      "Out",
+      "WaveformViewer.3",
+      "In"
+    ],
+    [
+      "Take.0",
+      "Out.1",
+      "Roi1D.0",
+      "In"
+    ],
+    [
+      "WFPeaks.0",
+      "Index",
+      "Take.1",
+      "In"
+    ],
+    [
+      "WFPeaks.0",
+      "Values",
+      "Take.1",
+      "In.1"
+    ],
+    [
+      "WFPeaks.0",
+      "Peak Times",
+      "Take.1",
+      "In.2"
+    ],
+    [
+      "WFPeaks.0",
+      "Num of Hits",
+      "WaveformViewer.1",
+      "In"
+    ],
+    [
+      "Take.1",
+      "Out.2",
+      "WaveformViewer.2",
+      "In"
+    ],
+    [
+      "Take.1",
+      "Out.2",
+      "Polynomial.0",
+      "In"
+    ],
+    [
+      "Roi1D.0",
+      "Out",
+      "Sum.0",
+      "In"
+    ],
+    [
+      "Polynomial.0",
+      "Out",
+      "Binning.0",
+      "In"
+    ],
+    [
+      "Binning.0",
+      "Bins",
+      "Histogram.1",
+      "Bins"
+    ],
+    [
+      "Binning.0",
+      "Counts",
+      "Histogram.1",
+      "Counts"
+    ],
+    [
+      "gas_detector:f_11_ENRC",
+      "Out",
+      "Divide.0",
+      "Float.1"
+    ],
+    [
+      "gas_detector:f_11_ENRC",
+      "Out",
+      "ScalarPlot.1",
+      "Y.1"
+    ],
+    [
+      "Sum.0",
+      "Out",
+      "Divide.0",
+      "Float"
+    ],
+    [
+      "Sum.0",
+      "Out",
+      "ScalarPlot.1",
+      "Y"
+    ],
+    [
+      "Divide.0",
+      "Out",
+      "ScalarPlot.0",
+      "Y"
+    ]
+  ],
+  "enabled": true,
+  "nodes": [
+    {
+      "class": "SourceNode",
+      "name": "times",
+      "state": {
+        "enabled": true,
+        "note": "",
+        "pos": [
+          100.0,
+          400.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array2d"
+          }
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "waveforms",
+      "state": {
+        "enabled": true,
+        "note": "",
+        "pos": [
+          100.0,
+          600.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array2d"
+          }
+        }
+      }
+    },
+    {
+      "class": "Take",
+      "name": "Take.0",
+      "state": {
+        "ctrl": {
+          "axis": 0,
+          "index": 7,
+          "mode": "raise"
+        },
+        "enabled": true,
+        "note": "",
+        "pos": [
+          300.0,
+          400.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "Union[amitypes.Array3d,amitypes.Array2d,amitypes.Array1d,List[float]]"
+          },
+          "In.1": {
+            "group": "group.1",
+            "io": "in",
+            "removable": true,
+            "ttype": "Union[amitypes.Array3d,amitypes.Array2d,amitypes.Array1d,List[float]]"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          },
+          "Out.1": {
+            "group": "group.1",
+            "io": "out",
+            "removable": true,
+            "ttype": "amitypes.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "WFPeaks",
+      "name": "WFPeaks.0",
+      "state": {
+        "ctrl": {
+          "base": 0.0,
+          "cfr": 0.85,
+          "deadtime": 10.0,
+          "ioffsetbeg": 1000,
+          "ioffsetend": 2000,
+          "leadingedge": true,
+          "num chans": "16",
+          "num hits": 10,
+          "thr": -0.05,
+          "wfbinbeg": 2000,
+          "wfbinend": 4000
+        },
+        "enabled": true,
+        "note": "",
+        "pos": [
+          300.0,
+          600.0
+        ],
+        "terminals": {
+          "Index": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array2d"
+          },
+          "Num of Hits": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          },
+          "Peak Times": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array2d"
+          },
+          "Times": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array2d"
+          },
+          "Values": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array2d"
+          },
+          "Waveform": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array2d"
+          }
+        }
+      }
+    },
+    {
+      "class": "LinePlot",
+      "name": "LinePlot.0",
+      "state": {
+        "enabled": true,
+        "note": "",
+        "pos": [
+          500.0,
+          500.0
+        ],
+        "terminals": {
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "WaveformViewer",
+      "name": "WaveformViewer.0",
+      "state": {
+        "enabled": true,
+        "note": "",
+        "pos": [
+          500.0,
+          300.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "Take",
+      "name": "Take.1",
+      "state": {
+        "ctrl": {
+          "axis": 0,
+          "index": 7,
+          "mode": "raise"
+        },
+        "enabled": true,
+        "note": "",
+        "pos": [
+          500.0,
+          900.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "Union[amitypes.Array3d,amitypes.Array2d,amitypes.Array1d,List[float]]"
+          },
+          "In.1": {
+            "group": "group.1",
+            "io": "in",
+            "removable": true,
+            "ttype": "Union[amitypes.Array3d,amitypes.Array2d,amitypes.Array1d,List[float]]"
+          },
+          "In.2": {
+            "group": "group.2",
+            "io": "in",
+            "removable": true,
+            "ttype": "Union[amitypes.Array3d,amitypes.Array2d,amitypes.Array1d,List[float]]"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          },
+          "Out.1": {
+            "group": "group.1",
+            "io": "out",
+            "removable": true,
+            "ttype": "amitypes.Array1d"
+          },
+          "Out.2": {
+            "group": "group.2",
+            "io": "out",
+            "removable": true,
+            "ttype": "amitypes.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "WaveformViewer",
+      "name": "WaveformViewer.1",
+      "state": {
+        "enabled": true,
+        "note": "",
+        "pos": [
+          500.0,
+          700.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "WaveformViewer",
+      "name": "WaveformViewer.3",
+      "state": {
+        "enabled": true,
+        "note": "",
+        "pos": [
+          500.0,
+          100.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "Roi1D",
+      "name": "Roi1D.0",
+      "state": {
+        "ctrl": {
+          "extent": 4000,
+          "origin": 2000
+        },
+        "enabled": true,
+        "note": "",
+        "pos": [
+          700.0,
+          100.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "WaveformViewer",
+      "name": "WaveformViewer.2",
+      "state": {
+        "enabled": true,
+        "note": "",
+        "pos": [
+          700.0,
+          900.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "Polynomial",
+      "name": "Polynomial.0",
+      "state": {
+        "ctrl": {
+          "c0": 4.0,
+          "c1": 1.0,
+          "c2": 2.0
+        },
+        "enabled": true,
+        "note": "",
+        "pos": [
+          700.0,
+          700.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "Binning",
+      "name": "Binning.0",
+      "state": {
+        "ctrl": {
+          "bins": 1000,
+          "density": false,
+          "range max": 4.0000016,
+          "range min": 4.0
+        },
+        "enabled": true,
+        "note": "",
+        "pos": [
+          900.0,
+          700.0
+        ],
+        "terminals": {
+          "Bins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          },
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          },
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "Union[float,amitypes.Array1d]"
+          }
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "gas_detector:f_11_ENRC",
+      "state": {
+        "enabled": true,
+        "note": "",
+        "pos": [
+          900.0,
+          300.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "float"
+          }
+        }
+      }
+    },
+    {
+      "class": "Sum",
+      "name": "Sum.0",
+      "state": {
+        "enabled": true,
+        "note": "",
+        "pos": [
+          900.0,
+          100.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "Union[amitypes.Array3d,amitypes.Array2d,amitypes.Array1d,List[float]]"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "float"
+          }
+        }
+      }
+    },
+    {
+      "class": "Divide",
+      "name": "Divide.0",
+      "state": {
+        "enabled": true,
+        "note": "",
+        "pos": [
+          1100.0,
+          100.0
+        ],
+        "terminals": {
+          "Float": {
+            "group": null,
+            "io": "in",
+            "removable": true,
+            "ttype": "float"
+          },
+          "Float.1": {
+            "group": null,
+            "io": "in",
+            "removable": true,
+            "ttype": "float"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "float"
+          }
+        }
+      }
+    },
+    {
+      "class": "ScalarPlot",
+      "name": "ScalarPlot.1",
+      "state": {
+        "ctrl": {
+          "Num Points": 100
+        },
+        "enabled": true,
+        "note": "",
+        "pos": [
+          1100.0,
+          300.0
+        ],
+        "terminals": {
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "float"
+          },
+          "Y.1": {
+            "group": null,
+            "io": "in",
+            "removable": true,
+            "ttype": "float"
+          }
+        }
+      }
+    },
+    {
+      "class": "Histogram",
+      "name": "Histogram.1",
+      "state": {
+        "enabled": true,
+        "note": "",
+        "pos": [
+          1100.0,
+          800.0
+        ],
+        "terminals": {
+          "Bins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          },
+          "Counts": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.Array1d"
+          }
+        }
+      }
+    },
+    {
+      "class": "ScalarPlot",
+      "name": "ScalarPlot.0",
+      "state": {
+        "ctrl": {
+          "Num Points": 100
+        },
+        "enabled": true,
+        "note": "",
+        "pos": [
+          1300.0,
+          100.0
+        ],
+        "terminals": {
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "float"
+          }
+        }
+      }
+    }
+  ],
+  "note": "",
+  "pos": [
+    0.0,
+    0.0
+  ],
+  "terminals": {}
+}
