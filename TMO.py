@@ -94,32 +94,42 @@ class POPProc(object):
 
     def __init__(self, args):
         self.args = args
-        self.calibconsts = {}
+        # self.calibconsts = {}
         self.accum_num = args.pop('accum_num', 1)
         self.normalize_dist = args.pop('normalizeDist', True)
         self.proc = None
         self.img = None
         self.counter = 0
 
-    def __call__(self, img, calib):
-        init = False
-        if self.calibconsts.keys() != calib.keys():
-            init = True
-        elif not all(np.array_equal(self.calibconsts[key], calib[key]) for key in calib):
-            init = True
+    def __call__(self, img):
+    #     init = False
+    #     if self.calibconsts.keys() != calib.keys():
+    #         init = True
+    #     elif not all(np.array_equal(self.calibconsts[key], calib[key]) for key in calib):
+    #         init = True
 
-        if init:
-            self.calibconsts = calib
+        if self.proc is None:
             self.img = np.zeros(img.shape)
             self.counter += 1
-            calib_dict, _ = calib.get('pop_rbfs')
-            self.proc = psanaPOP(img=img, RBFs_dict=calib_dict, **self.args)
+            self.proc = psanaPOP(img=img, **self.args)
 
             self.slice_img = np.array([[np.nan]])
             self.rbins = np.array([np.nan, np.nan])
             self.distr = np.array([np.nan])
             self.ebins = np.array([np.nan, np.nan])
             self.diste = np.array([np.nan])
+
+        if self.accum_num == 1:
+            pop = self.proc
+            pop.Peel(img)
+            slice_img = pop.GetSlice()
+            rbins, distr = pop.GetRadialDist()
+            ebins, diste = pop.GetEnergyDist()
+            if self.normalize_dist:
+                distr = distr/distr.max()
+                diste = diste/diste.max()
+
+            return slice_img, rbins, distr, ebins, diste
 
         self.img += img
 
@@ -129,7 +139,7 @@ class POPProc(object):
             self.slice_img = pop.GetSlice()
             self.rbins, self.distr = pop.GetRadialDist()
             self.ebins, self.diste = pop.GetEnergyDist()
-            self.counter = 1
+            self.counter = 0
             self.img = np.zeros(img.shape)
             if self.normalize_dist:
                 self.distr = self.distr/self.distr.max()
@@ -137,7 +147,7 @@ class POPProc(object):
         else:
             self.counter += 1
 
-        return self.slice_img, self.rbins[1:], self.distr, self.ebins[1:], self.diste
+        return self.slice_img, self.rbins, self.distr, self.ebins, self.diste
 
 
 class POP(CtrlNode):
@@ -148,7 +158,8 @@ class POP(CtrlNode):
 
     nodeName = "POP"
 
-    uiTemplate = [('lmax', 'intSpin', {'value': 4, 'values': ['2', '4', '6', '8', '10', '12']}),
+    uiTemplate = [('RBFs_fnm', 'text'),
+                  ('lmax', 'intSpin', {'value': 4, 'values': ['2', '4', '6', '8', '10', '12']}),
                   ('reg', 'doubleSpin', {'value': 0}),
                   ('alpha', 'doubleSpin', {'value': 4e-4}),
                   ('X0', 'intSpin', {'value': 512}),
@@ -160,7 +171,6 @@ class POP(CtrlNode):
 
     def __init__(self, name):
         super().__init__(name, terminals={'Image': {'io': 'in', 'ttype': Array2d},
-                                          'Calib': {'io': 'in', 'ttype': typing.Dict},
                                           'sliceImg': {'io': 'out', 'ttype': Array2d},
                                           'Rbins': {'io': 'out', 'ttype': Array1d},
                                           'DistR': {'io': 'out', 'ttype': Array1d},
