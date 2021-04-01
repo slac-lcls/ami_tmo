@@ -27,9 +27,7 @@ class HSDPeakSelector(CtrlNode):
             'Num Peaks': {'io': 'out', 'ttype': int}
         })
 
-    def to_operation(self, inputs, conditions={}):
-        outputs = self.output_vars()
-
+    def to_operation(self, **kwargs):
         digitizer = self.values['digitizer']
         channel = self.values['channel']
 
@@ -44,8 +42,7 @@ class HSDPeakSelector(CtrlNode):
             return start_pos, times, peaks, len(peaks)
 
         node = gn.Map(name=self.name()+"_operation",
-                      condition_needs=conditions, inputs=inputs, outputs=outputs,
-                      func=func,  parent=self.name())
+                      **kwargs, func=func)
 
         return node
 
@@ -78,8 +75,7 @@ try:
 
             return self.widget
 
-        def to_operation(self, inputs, conditions={}):
-            outputs = self.output_vars()
+        def to_operation(self, **kwargs):
             numchs = len(self.widget.channel_groups)
             cfdpars = {'numchs': numchs,
                        'numhits': self.values['num hits'],
@@ -116,50 +112,12 @@ try:
                 else:
                     return np.array([]), np.array([]), np.array([]), np.array([])
 
-            node = gn.Map(name=self.name()+"_operation",
-                          condition_needs=conditions,
-                          inputs=inputs, outputs=outputs,
-                          func=peakFinder, parent=self.name())
+            node = gn.Map(name=self.name()+"_operation", **kwargs, func=peakFinder)
             return node
 
 except ImportError as e:
     print(e)
 
-# class PeakWidget(PlotWidget):
-
-#     def __init__(self, topics=None, terms=None, addr=None, parent=None, **kwargs):
-#         super().__init__(topics, terms, addr, parent=parent, **kwargs)
-
-#     def data_updated(self, data):
-#         for term, name in self.terms.items():
-#             if name not in self.plot:
-#                 self.plot[name] = {}
-#                 self.trace_attrs[name] = {}
-#                 for peakidx, peak in enumerate(data[name]):
-#                     idx = f"peak.{peakidx}"
-#                     symbol, color = symbols_colors[peakidx]
-#                     legend_name = self.update_legend_layout(idx, '.'.join([name, idx]),
-#                                                             symbol=symbol, color=color)
-#                     attrs = self.legend_editors[idx].attrs
-#                     self.trace_attrs[name][peakidx] = attrs
-#                     self.plot[name][peakidx] = self.plot_view.plot(y=peak, name=legend_name,
-#                                                                    pen=attrs['pen'],
-#                                                                    **attrs['point'])
-#             else:
-#                 for peakidx, peak in enumerate(data[name]):
-#                     if peakidx in self.plot[name]:
-#                         attrs = self.trace_attrs[name][peakidx]
-#                         self.plot[name][peakidx].setData(y=peak, **attrs['point'])
-#                     else:
-#                         idx = f"peak.{peakidx}"
-#                         symbol, color = symbols_colors[peakidx]
-#                         legend_name = self.update_legend_layout(idx, '.'.join([name, idx]),
-#                                                                 symbol=symbol, color=color)
-#                         attrs = self.legend_editors[idx].attrs
-#                         self.trace_attrs[name][peakidx] = attrs
-#                         self.plot[name][peakidx] = self.plot_view.plot(y=peak, name=legend_name,
-#                                                                        pen=attrs['pen'],
-#                                                                        **attrs['point'])
 
 class PeakWidget(PlotWidget):
 

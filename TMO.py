@@ -68,9 +68,7 @@ class Histogram2DRoi(CtrlNode):
             self.roi.setPos(origin.x(), origin.y(), finish=False)
             self.roi.setSize((self.values['extent x'], self.values['extent y']), finish=False)
 
-    def to_operation(self, inputs, conditions={}):
-        outputs = self.output_vars()
-
+    def to_operation(self, **kwargs):
         ox = self.values['origin x']
         ex = self.values['extent x']
         oy = self.values['origin y']
@@ -84,9 +82,7 @@ class Histogram2DRoi(CtrlNode):
             return x[xs], y[ys], img[xs, ys]
 
         node = gn.Map(name=self.name()+"_operation",
-                      condition_needs=conditions, inputs=inputs, outputs=outputs,
-                      func=func,
-                      parent=self.name())
+                      func=func, **kwargs)
         return node
 
 
@@ -177,11 +173,7 @@ class POP(CtrlNode):
                                           'Ebins': {'io': 'out', 'ttype': Array1d},
                                           'DistE': {'io': 'out', 'ttype': Array1d}})
 
-    def to_operation(self, inputs, conditions={}):
-        outputs = self.output_vars()
-
+    def to_operation(self, **kwargs):
         node = gn.Map(name=self.name()+"_operation",
-                      condition_needs=conditions,
-                      inputs=inputs, outputs=outputs, parent=self.name(),
-                      func=POPProc(self.values))
+                      **kwargs, func=POPProc(self.values))
         return node
